@@ -17,7 +17,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://theroy.co.il/#roy", "name": "רועי כהן", "alternateName": "Roy Cohen", "jobTitle": "קמפיינר פוליטי וקריאייטיב", "url": "https://theroy.co.il/", "image": "https://theroy.co.il/assets/roy-stage.jpg", "sameAs": ["https://www.facebook.com/roy.cohen.716/", "https://www.instagram.com/cekll12/", "https://x.com/cekll12"], "knowsAbout": ["קמפיינים פוליטיים", "גיוס המונים", "שילוט חוצות", "קריאייטיב", "וידאו", "דיגיטל", "AI"]}, {"@type": "ProfessionalService", "@id": "https://theroy.co.il/#service", "name": "רועי כהן, קמפיינר", "url": "https://theroy.co.il/", "founder": {"@id": "https://theroy.co.il/#roy"}, "areaServed": "IL", "serviceType": ["קמפיינים פוליטיים", "ניהול גיוס המונים", "קריאייטיב ושילוט", "הפקת וידאו", "אסטרטגיה דיגיטלית"]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 /* מוקאפ 4: שלט חוצות. ארבעה צבעים, שני פונטים, סקאלת מרווחים אחת, מסגרת אחת. */
 :root{
@@ -28,8 +28,8 @@
   --s1:8px; --s2:16px; --s3:32px; --s4:64px; --s5:128px;
   --frame:6px;
   --wrap:1240px;
-  --display:'Karantina', 'Heebo', sans-serif;
-  --body:'Heebo', sans-serif;
+  --display:'Karantina', 'Rubik', sans-serif;
+  --body:'Rubik', sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -61,7 +61,7 @@ ul,ol{list-style:none}
 .sign h1{font-size:clamp(72px,18.5vw,250px)}
 .sign h1 span{display:block}
 .sign-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--s2);margin-top:var(--s3);padding-top:var(--s2);border-top:var(--frame) solid var(--black)}
-.sign-foot p{font-size:clamp(18px,2.2vw,26px);font-weight:700;line-height:1.3;max-width:28ch}
+.sign-foot p{font-size:clamp(18px,2.2vw,26px);font-weight:500;line-height:1.3;max-width:28ch}
 @media (max-width:600px){.sign{padding:var(--s2)}}
 
 .btn{display:inline-block;background:var(--black);color:var(--white);font-weight:700;font-size:18px;text-decoration:none;padding:var(--s2) var(--s3);border:var(--frame) solid var(--black)}
@@ -102,7 +102,7 @@ ul,ol{list-style:none}
 .funds li{border-top:var(--frame) solid var(--yellow);padding-top:var(--s2)}
 .funds .num{font-family:var(--display);font-weight:700;color:var(--yellow);font-size:clamp(48px,5.2vw,76px);white-space:nowrap;line-height:.9;direction:ltr;text-align:right}
 .funds .num small{font-size:.5em}
-.funds li p:last-child{font-weight:700;margin-top:var(--s1)}
+.funds li p:last-child{font-weight:500;margin-top:var(--s1)}
 
 /* לוגואים */
 .logos{background:var(--white)}
@@ -117,7 +117,7 @@ ul,ol{list-style:none}
 @media (max-width:800px){.about-in{grid-template-columns:minmax(0,1fr);gap:var(--s3)}}
 .about-img{border:var(--frame) solid var(--black);aspect-ratio:4/5;overflow:hidden;max-width:480px}
 .about-img img{width:100%;height:100%;object-fit:cover}
-.about-text p{font-size:22px;font-weight:700;line-height:1.4;margin-bottom:var(--s2)}
+.about-text p{font-size:22px;font-weight:400;line-height:1.4;margin-bottom:var(--s2)}
 .about-text p.punch{font-family:var(--display);font-size:clamp(48px,6vw,80px);line-height:.9;margin-top:var(--s3)}
 
 /* תהליך */
@@ -219,7 +219,6 @@ ul,ol{list-style:none}
 .cicon:hover{background:var(--black);color:var(--yellow)}
 .cicon.wa{background:var(--black);color:var(--yellow)}.cicon.wa:hover{background:transparent;color:var(--black)}
 @media (max-width:600px){.cicon{width:104px;height:104px}.cicon svg{width:52px;height:52px}}
-body{font-weight:700}
 
 .vwall{grid-template-columns:repeat(4,minmax(0,1fr))}
 .wl-b.tall{grid-row:span 2;aspect-ratio:auto}
@@ -230,6 +229,10 @@ body{font-weight:700}
 
 .vmd-in,.vmd-in.vert{width:auto;height:auto;aspect-ratio:auto;max-width:92vw;max-height:88vh;display:flex}
 .vmd-in video{width:auto;height:auto;max-width:calc(92vw - 12px);max-height:calc(88vh - 12px)}
+
+.kicker{display:block;font-family:var(--body);font-weight:400;font-size:15px;line-height:1.3;letter-spacing:.02em;opacity:.62;margin:0 0 10px}
+h1 .kicker{font-size:16px;margin-bottom:18px}
+.sec-title{margin-top:0}
 </style>
 </head>
 <body>
@@ -249,7 +252,7 @@ body{font-weight:700}
 <section class="hero" id="top">
   <div class="wrap">
     <div class="sign">
-      <h1 class="display"><span>אהלן,</span><span>הגעת למקום</span><span>הנכון. <small class="aside">(כנראה.)</small></span></h1>
+      <h1 class="display"><span class="kicker">רועי כהן, קמפיינר פוליטי וקריאייטיב</span><span>אהלן,</span><span>הגעת למקום</span><span>הנכון. <small class="aside">(כנראה.)</small></span></h1>
       <div class="sign-foot">
         <p>מהרעיון עד השלט לאיילון - קריאטיב, תוכן, אסטרטגיה ומתכונים למג'דרה.<br>הכל במקום אחד.</p>
         <a class="btn" href="#contact">דברו איתי</a>
@@ -263,6 +266,7 @@ body{font-weight:700}
 <!-- עבודות נבחרות -->
 <section class="sec" id="works">
   <div class="wrap">
+    <p class="kicker">קמפיינים, שילוט חוצות ומודעות עיתון</p>
     <h2 class="sec-title">מלוא הטנא קריאטיב</h2>
     <div class="grid">
 
@@ -322,6 +326,7 @@ body{font-weight:700}
 <!-- וידאו -->
 <section class="sec videos" id="videos">
   <div class="wrap">
+    <p class="kicker">סרטונים פוליטיים וסאטיריים</p>
     <h2 class="sec-title">נכנס בריף, יצא סרטון.</h2>
     <div class="vwall">
       <button class="wl-b tall" data-src="assets/video/asaf-friends.mp4" onclick="openLocal(this.dataset.src)" aria-label="נגן: חברים כותבים לאסף"><img src="assets/vposters/asaf.jpg" alt="סרטון: חברים כותבים לאסף" loading="lazy"></button>
@@ -339,6 +344,7 @@ body{font-weight:700}
 <!-- גיוסי המונים -->
 <section class="sec funds" id="funds">
   <div class="wrap">
+    <p class="kicker">ניהול קמפייני גיוס המונים</p>
     <h2 class="sec-title">גייסו <small class="aside">(מההמונים)</small> ונהנו:</h2>
     <ul>
       <li><p class="num">1,000,000+ <small>₪</small></p><p>הליכודניקים החדשים, בשני קמפיינים</p></li>
@@ -352,6 +358,7 @@ body{font-weight:700}
 <!-- לוגואים -->
 <section class="sec logos">
   <div class="wrap">
+    <p class="kicker">לקוחות שעבדתי איתם</p>
     <h2 class="sec-title">ניסו ונהנו.</h2>
     <div class="logo-grid">
         <div><span class="lg" role="img" aria-label="עיריית תל אביב-יפו" style="--src:url(assets/logos-mono/tlv.png)"></span></div>
@@ -381,7 +388,8 @@ body{font-weight:700}
   <div class="wrap about-in">
     <figure class="about-img"><img src="assets/roy-stage.jpg" style="object-position:0% top" alt="רועי כהן מרצה על במה"></figure>
     <div class="about-text">
-      <h2 class="sec-title">מי אני</h2>
+      <p class="kicker">על רועי כהן</p>
+    <h2 class="sec-title">מי אני</h2>
       <p class="about-long">בעשור האחרון יצא לי לשפוט בתחרות הקריאטייב הישראלי, לעבוד על קמפיינים פוליטיים בארץ ובחו"ל, מפריימריז ועד דיגיטל של מרוץ לראשות תל אביב-יפו, לנהל את הסושיאל של בני גנץ בשלוש מערכות בחירות, להרצות על שימוש נבזי (ומגניב!) ב-AI, לתלות ציורים של 26 ישראלים על שלטי ענק עד שהגיעו לאו"ם בג'נבה, ועדיין אין לי תשובה קצרה לשאלה מה אני עושה.</p>
       <p class="punch">נגיד קמפיינר.</p>
     </div>
@@ -391,6 +399,7 @@ body{font-weight:700}
 <!-- תהליך -->
 <section class="sec">
   <div class="wrap">
+    <p class="kicker">ליווי קמפיין בארבעה שלבים</p>
     <h2 class="sec-title">התהליך</h2>
     <ol class="steps">
       <li><span class="step">01</span><h3>דייט ראשון</h3><p>נפגשים, מקשיבים לכאב הראש. בסוף הפגישה יש מצפן, יש עוגה ויש לי שיעורי בית.</p></li>
@@ -405,7 +414,8 @@ body{font-weight:700}
 <section class="sec contact" id="contact">
   <div class="wrap">
     <div class="sign">
-      <h2 class="display">דברו איתי.</h2>
+      <p class="kicker">יצירת קשר</p>
+    <h2 class="display">דברו איתי.</h2>
             <div class="cicons">
         <a class="cicon" href="mailto:roy@theroy.co.il" aria-label="מייל"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="11" width="38" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M6 13l18 14 18-14" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/></svg></a>
         <a class="cicon wa" href="https://wa.me/972503212126" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5a19 19 0 0 0-16.4 28.6L5 43l9.7-2.5A19 19 0 1 0 24 5z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M17.5 14.5c.6-.6 1.6-.6 2.1.1l2.2 3.1c.4.6.3 1.4-.2 1.9l-1.3 1.2c1 2.4 3 4.6 5.6 5.8l1.3-1.3c.5-.5 1.3-.6 1.9-.2l3.1 2.1c.7.5.8 1.5.2 2.1l-1.6 1.7c-1 1-2.5 1.3-3.8.8-5.8-2.2-10.3-6.7-12.4-12.4-.5-1.3-.2-2.8.8-3.8z" fill="currentColor"/></svg></a>
