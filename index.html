@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>רועי כהן | קמפיינר פוליטי, קריאייטיב ודיגיטל</title>
 <meta name="description" content="רועי כהן, קמפיינר פוליטי וחברתי: קריאייטיב, וידאו, שילוט, גיוס המונים ואסטרטגיה דיגיטלית לעמותות, למחאות, לקמפיינים פוליטיים ולחברות דיפנס טק.">
-<meta name="robots" content="noindex">
+
 <link rel="canonical" href="https://theroy.co.il/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
@@ -213,12 +213,12 @@ ul,ol{list-style:none}
 @media (max-width:600px){.vwall{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .sec-title .aside{font-size:.42em;font-family:var(--body);font-weight:700;vertical-align:middle;letter-spacing:0}
 
-.cicons{display:flex;gap:var(--s3);margin-top:var(--s3)}
+.cicons{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s3)}
 .cicon{width:132px;height:132px;display:flex;align-items:center;justify-content:center;border:var(--frame) solid var(--black);color:var(--black);background:transparent;transition:background .2s,color .2s}
 .cicon svg{width:64px;height:64px}
 .cicon:hover{background:var(--black);color:var(--yellow)}
 .cicon.wa{background:var(--black);color:var(--yellow)}.cicon.wa:hover{background:transparent;color:var(--black)}
-@media (max-width:600px){.cicon{width:104px;height:104px}.cicon svg{width:52px;height:52px}}
+@media (max-width:600px){.cicons{gap:12px}.cicon{width:72px;height:72px}.cicon svg{width:38px;height:38px}}
 
 .vwall{grid-template-columns:repeat(4,minmax(0,1fr))}
 .wl-b.tall{grid-row:span 2;aspect-ratio:auto}
@@ -419,6 +419,8 @@ h1 .kicker{font-size:16px;margin-bottom:18px}
             <div class="cicons">
         <a class="cicon" href="mailto:roy@theroy.co.il" aria-label="מייל"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="11" width="38" height="26" rx="3" fill="none" stroke="currentColor" stroke-width="3.5"/><path d="M6 13l18 14 18-14" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/></svg></a>
         <a class="cicon wa" href="https://wa.me/972503212126" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5a19 19 0 0 0-16.4 28.6L5 43l9.7-2.5A19 19 0 1 0 24 5z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><path d="M17.5 14.5c.6-.6 1.6-.6 2.1.1l2.2 3.1c.4.6.3 1.4-.2 1.9l-1.3 1.2c1 2.4 3 4.6 5.6 5.8l1.3-1.3c.5-.5 1.3-.6 1.9-.2l3.1 2.1c.7.5.8 1.5.2 2.1l-1.6 1.7c-1 1-2.5 1.3-3.8.8-5.8-2.2-10.3-6.7-12.4-12.4-.5-1.3-.2-2.8.8-3.8z" fill="currentColor"/></svg></a>
+        <a class="cicon" href="https://www.facebook.com/roy.cohen.716/" target="_blank" rel="noopener" aria-label="פייסבוק"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M27 42V26h5.5l.8-6.3H27v-4c0-1.8.5-3.1 3.1-3.1h3.4V7c-.6-.1-2.6-.3-4.9-.3-4.9 0-8.2 3-8.2 8.4v4.6H15V26h5.4v16z" fill="currentColor"/></svg></a>
+        <a class="cicon" href="https://www.instagram.com/cekll12/" target="_blank" rel="noopener" aria-label="אינסטגרם"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="7" width="34" height="34" rx="10" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="34" cy="14" r="2.3" fill="currentColor"/></svg></a>
       </div>
     </div>
   </div>
