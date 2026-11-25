@@ -302,8 +302,8 @@ h1 .kicker{font-size:16px;margin-bottom:18px}
 }
 
 /* כותרות סייבר: האותיות מתערבלות לסמלים ומתיישבות כשהכותרת נכנסת למסך (25.11) */
-.dec-on{animation:decjump .22s steps(3) 1}
-@keyframes decjump{0%{transform:translate(8px,-4px) skewX(-8deg);opacity:.4}40%{transform:translate(-6px,2px) skewX(6deg);opacity:1}70%{transform:translate(3px,0)}100%{transform:none}}
+.dec-on{animation:decjump .3s ease-out 1}
+@keyframes decjump{0%{transform:translateY(6px);opacity:.3}100%{transform:none;opacity:1}}
 .dec-ch{color:var(--black);text-shadow:3px 0 var(--yellow),-2px 0 var(--cyan)}
 .funds .dec-ch,.videos .dec-ch{color:var(--cyan);text-shadow:2px 0 var(--yellow)}
 .contact .dec-ch,.about .dec-ch{color:var(--white);text-shadow:2px 0 var(--black)}
@@ -520,9 +520,9 @@ var SYM='!<>-_\/[]{}=+*^?#@$%&01אבגדהזחטיכלמנסעפצקרשת';
 function nodes(el){var a=[],w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);while(w.nextNode())if(w.currentNode.nodeValue.trim())a.push(w.currentNode);return a}
 function run(el){var ns=nodes(el),orig=ns.map(function(n){return n.nodeValue});el.setAttribute('aria-label',el.textContent.trim());
 var h=el.offsetHeight;el.style.minHeight=h+'px';el.classList.add('dec-on');
-var total=orig.join('').length,t0=performance.now(),D=900;
+var total=orig.join('').length,t0=performance.now(),D=1800,last=0;
 var spans=ns.map(function(n){var sp=document.createElement('span');n.parentNode.replaceChild(sp,n);return sp});
-function frame(now){var p=Math.min(1,(now-t0)/D),done=Math.floor(p*p*total*1.05),k=0;
+function frame(now){var p=Math.min(1,(now-t0)/D);if(p<1&&now-last<85){requestAnimationFrame(frame);return}last=now;var done=Math.floor(p*total*1.05),k=0;
 spans.forEach(function(sp,i){var o=orig[i],html='';for(var j=0;j<o.length;j++,k++){var c=o[j];
 if(k<done||c===' '||c==='.'||c===','||c===':'){html+=c==='<'?'&lt;':c==='&'?'&amp;':c}else{var r=SYM[Math.random()*SYM.length|0];html+='<span class="dec-ch">'+(r==='<'?'&lt;':r==='&'?'&amp;':r==='>'?'&gt;':r)+'</span>'}}sp.innerHTML=html});
 if(p<1)requestAnimationFrame(frame);else{spans.forEach(function(sp,i){sp.replaceWith(document.createTextNode(orig[i]))});el.style.minHeight='';el.classList.remove('dec-on')}}
