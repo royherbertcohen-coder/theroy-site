@@ -254,6 +254,17 @@ h1 .kicker{font-size:16px;margin-bottom:18px}
  .stage .wrap{padding-bottom:28px}
  .lt .btn{font-size:28px;padding:12px 22px}
 }
+
+/* הירו פסיכודלי: 13 גרסאות AI, אחת כל חצי שנייה (25.11) */
+.stack{position:absolute;inset:0}
+.stack img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;visibility:hidden}
+.stack img.on{visibility:visible}
+.stack.glitch img.on{animation:gl .14s steps(2) 1}
+@keyframes gl{0%{transform:translate(-6px,2px);filter:hue-rotate(90deg) saturate(2.2) contrast(1.2)}50%{transform:translate(5px,-3px);filter:hue-rotate(-60deg) saturate(1.8)}100%{transform:none;filter:none}}
+.stack::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(to bottom,rgba(0,0,0,.08) 0 2px,transparent 2px 4px);pointer-events:none;opacity:0}
+.stack.glitch::after{opacity:1}
+.ai-tag{position:absolute;z-index:3;top:16px;left:16px;font:700 13px/1 var(--body);color:rgba(255,255,255,.75);background:rgba(0,0,0,.45);padding:6px 9px;visibility:hidden}
+@media (max-width:800px){.stack img{object-position:40% 20%}}
 </style>
 </head>
 <body>
@@ -271,10 +282,10 @@ h1 .kicker{font-size:16px;margin-bottom:18px}
 
 <!-- הירו: במה מלאה -->
 <section class="stage" id="top">
-  <picture>
-    <source media="(max-width:800px)" srcset="img/roy-cohen-campaigner-lecture-mobile.webp">
-    <img width="1448" height="1086" src="img/roy-cohen-campaigner-lecture.webp" alt="רועי כהן מרצה על במה עם מיקרופון">
-  </picture>
+  <div class="stack" id="stack">
+    <img width="1448" height="1086" class="on" src="img/roy-cohen-campaigner-lecture.webp" alt="רועי כהן מרצה על במה עם מיקרופון">
+  </div>
+  <div class="ai-tag" id="aiTag" aria-hidden="true">AI</div>
   <div class="wrap">
     <div class="lt">
       <h1 class="display"><span>אהלן,</span><span>אני רועי,</span><span>ואני עושה</span><span>קמפיינים.</span></h1>
@@ -458,6 +469,14 @@ function openV(id){document.getElementById('vmdin').innerHTML='<iframe src="http
 function openLocal(src){const m=document.getElementById('vmdin');m.innerHTML='<video src="'+src+'" controls autoplay playsinline></video>';document.getElementById('vmd').classList.add('on');}
 function closeV(){const m=document.getElementById('vmdin');document.getElementById('vmd').classList.remove('on');m.innerHTML='';m.classList.remove('vert');}
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeV();});
+</script>
+<script>
+(function(){var stack=document.getElementById('stack'),tag=document.getElementById('aiTag');if(!stack)return;
+var imgs=[stack.querySelector('img')];
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var F=['assets/psy/01.webp','assets/psy/02.webp','assets/psy/03.webp','assets/psy/04.webp','assets/psy/05.webp','assets/psy/06.webp','assets/psy/07.webp','assets/psy/08.webp','assets/psy/09.webp','assets/psy/10.webp','assets/psy/11.webp','assets/psy/12.webp','assets/psy/13.webp'];F.forEach(function(src){var im=new Image();im.alt='';im.decoding='async';im.src=src;stack.appendChild(im);imgs.push(im);});
+var cur=0;function go(n){imgs[cur].classList.remove('on');cur=n%imgs.length;imgs[cur].classList.add('on');tag.style.visibility=cur?'visible':'hidden';stack.classList.remove('glitch');void stack.offsetWidth;stack.classList.add('glitch');}
+setTimeout(function(){go(1);setInterval(function(){if(!document.hidden)go(cur+1)},500)},1200);})();
 </script>
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "63dcae2c74d04a12814a7092c736cbf6"}'></script>
 </body>
